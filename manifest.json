@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "KRRG DS",
+  "version": "0.1.0",
+  "description": "Клиент, который получает задачи с сервера и выполняет их через веб-интерфейс DeepSeek",
+
+  "action": {
+    "default_popup": "popup/popup.html"
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "storage",
+    "alarms",
+    "scripting",
+    "tabs"
+  ],
+
+  "host_permissions": [
+    "http://localhost:8080/*",
+    "https://chat.deepseek.com/*"
+  ]
+}
