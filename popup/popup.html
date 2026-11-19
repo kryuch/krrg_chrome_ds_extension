@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>KRRG</title>
+    <style>
+        body {
+            width: 300px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        input {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 4px;
+        }
+
+        button:disabled {
+            cursor: default;
+            opacity: 0.6;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        #stopButton {
+            background: #f5c6c6;
+        }
+
+        #message {
+            margin-top: 10px;
+            font-size: 13px;
+            color: #555;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        #logoutLink {
+            display: block;
+            margin-top: 12px;
+            font-size: 12px;
+            text-align: center;
+            cursor: pointer;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>KRRG</h2>
+
+<div id="loginView">
+
+    <input type="text" id="username" placeholder="Логин" autocomplete="username">
+    <input type="password" id="password" placeholder="Пароль" autocomplete="current-password">
+
+    <button id="loginButton">
+        Войти
+    </button>
+
+</div>
+
+<div id="controlView" class="hidden">
+
+    <div id="status"></div>
+
+    <button id="startButton">
+        Начать
+    </button>
+
+    <button id="stopButton">
+        Остановить
+    </button>
+
+    <span id="logoutLink">Выйти</span>
+
+</div>
+
+<div id="message"></div>
+
+<script src="../config.js"></script>
+<script src="popup.js"></script>
+
+</body>
+
+</html>
